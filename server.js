@@ -2,11 +2,15 @@ var express = require('express');
 var mongo = require("mongodb");
 var request = require("request");
 
-var dataURL = process.env.MONGOLAB_URI;
+var dataURL = process.env.MONGOLAB_URI_2;
 var app = express();
 
 var apiKey = process.env.GOOGLESEARCHKEY;
 var searchEngineID = process.env.SEARCHENGINEID;
+
+app.get('/image-search-abstraction-layer/', function(req, res) {
+	res.sendFile(__dirname + '/index/image-search-index.html');	
+});
 
 
 app.get('/image-search-abstraction-layer/new-search/*', function (req, res) {
