@@ -3,7 +3,6 @@ var mongo = require("mongodb");
 var request = require("request");
 
 var dataURL = process.env.MONGOLAB_URI;
-
 var app = express();
 
 var apiKey = process.env.GOOGLESEARCHKEY;
